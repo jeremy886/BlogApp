@@ -6,17 +6,13 @@
 </head>
 <body>
 <div><h1>Y10 IT Programming and Web Design Blog</h1></div>
+{% for post in posts %}
 <div>
-    <p>published: 20/19/2016, 08:30</p>
-    <h2><a href="">My first post</a></h2>
-    <p>This will allow you to see the power of programming.</p>
-</div>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>published: {{ post.published_date }}</p>
+    <p>{{ post.text|linebreaksbr }}</p>
 
-<div>
-    <p>published: 20/19/2016, 10:30</p>
-    <h2><a href="">My second post</a></h2>
-    <p>For some of you, you can focus more on web design and web admin.</p>
 </div>
-
+{%  endfor %}
 </body>
 </html>
